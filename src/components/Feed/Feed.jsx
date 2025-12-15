@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Filters from "../Filters/Filters";
-import FeedContent from "./FeedContent";
+import FeedContent from "./FeedContent/FeedContent";
 
 import './Feed.scss';
 
