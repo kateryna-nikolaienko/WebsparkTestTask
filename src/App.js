@@ -1,7 +1,12 @@
 import './App.css';
+import Header from './components/Header/Header';
 
 function App() {
-  return <div>Profile feed</div>;
+  return (
+    <div className="page">
+      <Header />
+    </div>
+  );
 }
 
 export default App;

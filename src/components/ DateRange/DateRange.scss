@@ -1,0 +1,45 @@
+.date-range {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__label {
+    font-weight: 400;
+    font-size: 16px;
+    margin-right: 11px;
+  }
+}
+
+.date-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  width: 162px;
+  height: 26px;
+  overflow: hidden;
+
+  &:first-of-type {
+    margin-right: 22px;
+  }
+
+  &__field {
+    border: none;
+    flex: 1;
+    padding: 6px 8px;
+    min-width: 0;
+    color: #636264;
+  }
+
+  &__clear,
+  &__calendar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background-color: #ebebeb;
+    border-left: 1px solid #dedede;
+  }
+}
