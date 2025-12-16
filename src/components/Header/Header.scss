@@ -57,6 +57,7 @@
 
   &__stats-item {
     font-size: clamp(12px, 1.4vw, 14px);
+    font-weight: 400;
   }
 
   &__stats-item:nth-child(1) {
