@@ -22,6 +22,7 @@ function DateRange() {
           options={{
             dateFormat: 'd-m-Y',
             maxDate: to || null,
+            disableMobile: true,
           }}
           placeholder="from"
           className="date-input__field"
@@ -46,6 +47,7 @@ function DateRange() {
           options={{
             dateFormat: 'd-m-Y',
             minDate: from || null,
+            disableMobile: true,
           }}
           placeholder="to"
           className="date-input__field"

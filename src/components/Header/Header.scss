@@ -2,8 +2,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 86px;
-  padding: 6px 0 28px;
+  gap: clamp(32px, 6vw, 86px);
+  padding: clamp(8px, 2vw, 28px) 0;
   position: relative;
   z-index: 1;
   box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.06), 0 4px 24px rgba(0, 0, 0, 0.12);
@@ -17,8 +17,8 @@
   }
 
   &__avatar {
-    width: 138px;
-    height: 138px;
+    width: clamp(72px, 12vw, 138px);
+    height: clamp(72px, 12vw, 138px);
   }
 
   &__avatar-img {
@@ -30,42 +30,48 @@
   &__info-top {
     display: flex;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 15px;
+    gap: clamp(8px, 2vw, 16px);
+    margin-bottom: clamp(8px, 2vw, 15px);
   }
 
   &__name {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: clamp(16px, 2.2vw, 24px);
   }
 
   &__startDate {
-    font-size: 13px;
+    font-size: clamp(11px, 1.2vw, 13px);
     font-weight: 400;
-
     color: #3d8eda;
     border: 1px solid #3d8eda;
     border-radius: 2px;
-
-    padding: 6px 12px;
+    padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px);
   }
 
   &__stats {
     display: flex;
     align-items: center;
-    margin-bottom: 19px;
+    margin-bottom: clamp(8px, 2vw, 19px);
   }
 
   &__stats-item {
-    font-size: 14px;
+    font-size: clamp(12px, 1.4vw, 14px);
   }
 
   &__stats-item:nth-child(1) {
-    margin-right: 28px;
+    margin-right: clamp(12px, 3vw, 28px);
   }
 
   &__stats-item:nth-child(2) {
-    margin-right: 17px;
+    margin-right: clamp(8px, 2vw, 17px);
+  }
+}
+
+.profile {
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }

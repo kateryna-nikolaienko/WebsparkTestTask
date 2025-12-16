@@ -11,14 +11,44 @@
 
   &--top {
     top: 0;
-    left: 0;
-    height: 480px;
+    left: -5%;
+    height: clamp(260px, 35vw, 480px);
   }
 
   &--bottom {
     right: 0;
     bottom: 0;
-    width: 210px;
-    height: 315px;
+    width: clamp(120px, 18vw, 210px);
+    height: clamp(220px, 30vw, 368px);
+  }
+}
+
+.background-decor {
+  @media (max-width: 480px) {
+    &--top {
+      left: -20%;
+      height: clamp(220px, 55vw, 260px);
+      opacity: 0.9;
+    }
+
+    &--bottom {
+      width: 100px;
+      height: 180px;
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: 360px) {
+    &--top {
+      left: -30%;
+      height: 200px;
+      opacity: 0.85;
+    }
+
+    &--bottom {
+      width: 80px;
+      height: 140px;
+      opacity: 0.6;
+    }
   }
 }

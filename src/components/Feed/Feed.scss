@@ -1,6 +1,11 @@
 .feed {
-  max-width: 836px;
+  max-width: clamp(320px, 80vw, 836px);
   margin: 0 auto;
   position: relative;
   z-index: 1;
+
+  @media (max-width: 500px) {
+    max-width: none;
+    margin: 0 10px;
+  }
 }

@@ -43,3 +43,22 @@
     border-left: 1px solid #dedede;
   }
 }
+
+@media (max-width: 450px) {
+  .date-range {
+    flex-direction: column;
+
+    &__label {
+      margin-right: 0;
+    }
+  }
+
+  .date-input {
+    width: 100%;
+
+    &:first-of-type {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

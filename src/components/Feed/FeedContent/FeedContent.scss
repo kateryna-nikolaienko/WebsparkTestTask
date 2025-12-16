@@ -1,19 +1,19 @@
 .feed-content {
   width: 100%;
-  margin-bottom: 16px;
-  font-size: 16px;
+  margin-bottom: clamp(12px, 3vw, 16px);
+  font-size: clamp(14px, 1.6vw, 16px);
 
   &--list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: clamp(6px, 1.5vw, 8px);
   }
 
   &--grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 8px;
-    row-gap: 16px;
+    column-gap: clamp(6px, 1.5vw, 8px);
+    row-gap: clamp(12px, 3vw, 16px);
   }
 }
 
@@ -21,9 +21,10 @@
   .feed-item {
     display: flex;
     align-items: center;
+    background-color: #fff;
 
     &__media {
-      width: 86px;
+      width: clamp(56px, 10vw, 86px);
       flex-shrink: 0;
     }
 
@@ -36,23 +37,24 @@
       display: flex;
       flex: 1;
       justify-content: space-between;
-      padding: 16px 80px 26px 30px;
+      padding: clamp(8px, 2vw, 16px) clamp(24px, 6vw, 80px)
+        clamp(12px, 3vw, 26px) clamp(12px, 3vw, 30px);
     }
 
     &__col {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: clamp(6px, 1.5vw, 8px);
     }
 
     &__stats {
       display: flex;
-      gap: 18px;
+      gap: clamp(10px, 2.5vw, 18px);
     }
 
     &__stat {
       display: flex;
-      gap: 6px;
+      gap: clamp(4px, 1vw, 6px);
     }
   }
 }
@@ -60,9 +62,11 @@
 .feed-content--grid {
   .feed-item {
     display: block;
+    background-color: #fff;
+    max-width: clamp(160px, 18vw, 203px);
 
     &__media {
-      width: 203px;
+      width: clamp(160px, 18vw, 203px);
     }
 
     &__image {
@@ -71,32 +75,33 @@
     }
 
     &__content {
-      padding: 12px 12px 18px 12px;
+      padding: clamp(4px, 2vw, 12px);
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto;
-      column-gap: 8px;
-      row-gap: 24px;
+      column-gap: clamp(4px, 1.5vw, 8px);
+      row-gap: clamp(16px, 4vw, 24px);
     }
 
     &__title,
     &__date {
-      margin-bottom: 7px;
+      margin-bottom: clamp(4px, 1vw, 7px);
+      font-size: clamp(12px, 1vw, 16px);
     }
 
     &__stat {
       display: flex;
-      gap: 6px;
-      margin-bottom: 6px;
-      font-size: 14px;
+      gap: clamp(4px, 1vw, 6px);
+      margin-bottom: clamp(4px, 1vw, 6px);
+      font-size: clamp(10px, 1.4vw, 14px);
     }
 
     &__type {
-      font-size: 14px;
+      font-size: clamp(10px, 1.4vw, 14px);
     }
 
     &__upload-date {
-      font-size: 12px;
+      font-size: clamp(8px, 1.2vw, 12px);
     }
 
     &__col:nth-child(1) {
@@ -120,6 +125,7 @@
   opacity: 0;
   transform: translateY(12px);
   animation: fadeInUp 0.4s ease forwards;
+  margin: 0;
 }
 
 @keyframes fadeInUp {
@@ -132,13 +138,87 @@
 .loadMore-btn {
   border: 1px solid #929292;
   border-radius: 14px;
-  padding: 8px 26px;
+  padding: clamp(6px, 1.5vw, 8px) clamp(16px, 4vw, 26px);
   margin: 0 auto;
-  display: block;
-  margin-bottom: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   color: #929292;
-  font-size: 11px;
-  height: 28px;
-  line-height: 1;
+  font-size: clamp(10px, 1.2vw, 11px);
+  line-height: 1.2;
+  display: block;
+}
+
+.feed-content--grid {
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+
+    .feed-item {
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 360px) {
+    grid-template-columns: 1fr;
+
+    .feed-item,
+    .feed-item__media {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .feed-item__content {
+      padding: 15px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .feed-content--list {
+    .feed-item {
+      align-items: flex-start;
+    }
+
+    .feed-item__media {
+      width: 56px;
+    }
+
+    .feed-item__content {
+      flex-direction: column;
+      padding: 8px 12px;
+      gap: 8px;
+    }
+
+    .feed-item__col {
+      gap: 4px;
+    }
+
+    /* перші дві колонки → в один ряд */
+    .feed-item__col:nth-child(1),
+    .feed-item__col:nth-child(2) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* третя колонка → під ними */
+    .feed-item__col:nth-child(3) {
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    .feed-item__stats {
+      gap: 12px;
+    }
+
+    .feed-item__stat {
+      font-size: 12px;
+    }
+  }
 }

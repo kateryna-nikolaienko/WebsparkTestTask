@@ -59,3 +59,15 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* Chrome, Edge, Safari */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+
+/* Firefox */
+input[type="date"] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
