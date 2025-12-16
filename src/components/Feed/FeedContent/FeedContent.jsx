@@ -11,7 +11,7 @@ function FeedContent({ view }) {
           <FeedItem key={post.id} post={post} />
         ))}
       </div>
-      <button className="loadMore-btn">LOAD MORE</button>
+      <button className="loadMore-btn">load more</button>
     </>
   );
 }
