@@ -1,5 +1,5 @@
 import './Header.scss';
-import avatarImg from '../../assets/images/avatar.jpg';
+import avatarImg from '../../assets/images/avatar.png';
 import DateRange from '../ DateRange/DateRange';
 
 function Header() {

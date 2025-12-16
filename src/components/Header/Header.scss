@@ -4,10 +4,17 @@
   justify-content: center;
   gap: 86px;
   padding: 6px 0 28px;
-  background-color: #fff;
-  box-shadow:
-    0 -4px 24px rgba(0, 0, 0, 0.06),
-    0 4px 24px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.06), 0 4px 24px rgba(0, 0, 0, 0.12);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.67);
+    z-index: -1;
+  }
 
   &__avatar {
     width: 138px;
