@@ -198,14 +198,12 @@
       gap: 4px;
     }
 
-    /* перші дві колонки → в один ряд */
     .feed-item__col:nth-child(1),
     .feed-item__col:nth-child(2) {
       display: flex;
       justify-content: space-between;
     }
 
-    /* третя колонка → під ними */
     .feed-item__col:nth-child(3) {
       flex-direction: row;
       justify-content: space-between;
