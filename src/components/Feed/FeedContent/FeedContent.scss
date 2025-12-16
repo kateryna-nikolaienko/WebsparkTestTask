@@ -116,6 +116,19 @@
   }
 }
 
+.feed-item {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .loadMore-btn {
   border: 1px solid #929292;
   border-radius: 14px;

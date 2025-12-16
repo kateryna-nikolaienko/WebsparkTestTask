@@ -2,6 +2,17 @@ import post1 from '../../../assets/images/post-1.jpg';
 import post2 from '../../../assets/images/post-2.jpg';
 import post3 from '../../../assets/images/post-3.jpg';
 import post4 from '../../../assets/images/post-4.jpg';
+import post5 from '../../../assets/images/post-5.jpg';
+import post6 from '../../../assets/images/post-6.jpg';
+import post7 from '../../../assets/images/post-7.jpg';
+import post8 from '../../../assets/images/post-8.jpg';
+import post9 from '../../../assets/images/post-9.jpg';
+import post10 from '../../../assets/images/post-10.jpg';
+import post11 from '../../../assets/images/post-11.jpg';
+import post12 from '../../../assets/images/post-12.jpg';
+import post13 from '../../../assets/images/post-13.jpg';
+import post14 from '../../../assets/images/post-14.jpg';
+import post15 from '../../../assets/images/post-15.jpg';
 
 export const posts = [
   {
@@ -43,6 +54,138 @@ export const posts = [
   {
     id: 4,
     image: post4,
+    title: 'Today',
+    postDate: '09-08-2016',
+    likes: 128,
+    comments: 31,
+    extraLikes: 67,
+    extraComments: 22,
+    type: 'Image upload',
+    uploadDate: '11-04-2016',
+  },
+  {
+    id: 5,
+    image: post5,
+    title: 'Today',
+    postDate: '09-08-2016',
+    likes: 128,
+    comments: 31,
+    extraLikes: 67,
+    extraComments: 22,
+    type: 'Image upload',
+    uploadDate: '11-04-2016',
+  },
+  {
+    id: 6,
+    image: post6,
+    title: 'Today',
+    postDate: '09-08-2016',
+    likes: 128,
+    comments: 31,
+    extraLikes: 67,
+    extraComments: 22,
+    type: 'Image upload',
+    uploadDate: '11-04-2016',
+  },
+  {
+    id: 7,
+    image: post7,
+    title: 'Today',
+    postDate: '09-08-2016',
+    likes: 128,
+    comments: 31,
+    extraLikes: 67,
+    extraComments: 22,
+    type: 'Image upload',
+    uploadDate: '11-04-2016',
+  },
+  {
+    id: 8,
+    image: post8,
+    title: 'Today',
+    postDate: '09-08-2016',
+    likes: 128,
+    comments: 31,
+    extraLikes: 67,
+    extraComments: 22,
+    type: 'Image upload',
+    uploadDate: '11-04-2016',
+  },
+  {
+    id: 9,
+    image: post9,
+    title: 'Today',
+    postDate: '09-08-2016',
+    likes: 128,
+    comments: 31,
+    extraLikes: 67,
+    extraComments: 22,
+    type: 'Image upload',
+    uploadDate: '11-04-2016',
+  },
+  {
+    id: 10,
+    image: post10,
+    title: 'Today',
+    postDate: '09-08-2016',
+    likes: 128,
+    comments: 31,
+    extraLikes: 67,
+    extraComments: 22,
+    type: 'Image upload',
+    uploadDate: '11-04-2016',
+  },
+  {
+    id: 11,
+    image: post11,
+    title: 'Today',
+    postDate: '09-08-2016',
+    likes: 128,
+    comments: 31,
+    extraLikes: 67,
+    extraComments: 22,
+    type: 'Image upload',
+    uploadDate: '11-04-2016',
+  },
+  {
+    id: 12,
+    image: post12,
+    title: 'Today',
+    postDate: '09-08-2016',
+    likes: 128,
+    comments: 31,
+    extraLikes: 67,
+    extraComments: 22,
+    type: 'Image upload',
+    uploadDate: '11-04-2016',
+  },
+  {
+    id: 13,
+    image: post13,
+    title: 'Today',
+    postDate: '09-08-2016',
+    likes: 128,
+    comments: 31,
+    extraLikes: 67,
+    extraComments: 22,
+    type: 'Image upload',
+    uploadDate: '11-04-2016',
+  },
+  {
+    id: 14,
+    image: post14,
+    title: 'Today',
+    postDate: '09-08-2016',
+    likes: 128,
+    comments: 31,
+    extraLikes: 67,
+    extraComments: 22,
+    type: 'Image upload',
+    uploadDate: '11-04-2016',
+  },
+  {
+    id: 15,
+    image: post15,
     title: 'Today',
     postDate: '09-08-2016',
     likes: 128,
